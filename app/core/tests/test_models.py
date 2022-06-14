@@ -2,9 +2,9 @@
 Test for models
 """
 
-from unittest import TestCase
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.contrib.auth import get_user_model
+
 
 class ModelTests(TestCase):
     """Test Models"""
