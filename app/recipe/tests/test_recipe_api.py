@@ -194,8 +194,8 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_404_NOT_FOUND)
         self.assertTrue(Recipe.objects.filter(id=recipe.id).exists())
 
-    def test_create_recipie_with_new_tags(self):
-        """Test creating a recipie with new tags"""
+    def test_create_recipe_with_new_tags(self):
+        """Test creating a recipe with new tags"""
         payload = {
             'title': 'Thai Prawn Curry',
             'time_minutes': 30,
@@ -216,7 +216,7 @@ class PrivateRecipeApiTests(TestCase):
             ).exists()
             self.assertTrue(exists)
 
-    def test_create_recipie_with_existing_tags(self):
+    def test_create_recipe_with_existing_tags(self):
         """Test creating a recipie with existing tags"""
         tag_indian = Tag.objects.create(user=self.user, name='Indian')
         payload = {
